@@ -21,6 +21,14 @@ public enum ConceptModel {
     /// and the CLIP `tokenizer/`.
     public static let bundleName = "sam3-float16"
 
+    /// The commit of ``repository`` the measurements were made on — pin
+    /// downloads to it, so a later push cannot change what a run fetches.
+    public static let revision = "fa57c10ca2bc26227eef5fb7037b6bd5f2ed414c"
+
+    /// The Application Support folder tools keep the bundle in. One name for
+    /// every tool, so a 1.6 GB download serves `cutout` and `img` alike.
+    public static let sharedFolder = "segment-sam3"
+
     /// Meta's licence, which travels with the weights.
     public static let licence = "SAM License (Meta)"
 }
