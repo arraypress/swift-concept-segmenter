@@ -12,8 +12,13 @@ let package = Package(
     ],
     dependencies: [
         // Apple's official Core AI recipes and runtime (BSD-3): SAM 3's
-        // pre- and post-processing, kept working by Apple across OS betas.
-        .package(url: "https://github.com/apple/coreai-models.git", from: "1.0.0"),
+        // pre- and post-processing, kept working by Apple across OS betas —
+        // through arraypress's fork of it: Apple's 1.0.0 plus a diffusion-only
+        // change (non-square exports). Segmentation is Apple's code unchanged; the
+        // fork is used so this package can sit beside swift-image-generation in
+        // one tool (`imagine --only`) — SwiftPM cannot hold two packages called
+        // coreai-models from different URLs. Alone, this resolves to the fork's 1.0.0.
+        .package(url: "https://github.com/arraypress/coreai-models.git", from: "1.0.0-nonsquare.1"),
     ],
     targets: [
         .target(

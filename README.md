@@ -3,7 +3,7 @@
 Masks by name, on this device. Give it an image and a word or short phrase — `dog`, `eye`,
 `the red car`, `sky` — and it returns every instance: a mask at the image's size, a box and a
 score. Meta's **SAM 3** on Apple's Core AI runtime, through Apple's own recipe and Swift
-package ([apple/coreai-models](https://github.com/apple/coreai-models)).
+package ([apple/coreai-models](https://github.com/apple/coreai-models)), resolved through [arraypress's fork](https://github.com/arraypress/coreai-models) of it — Apple's 1.0.0 plus a diffusion-only change — so this library and swift-image-generation can share one tool (SwiftPM cannot hold two packages named coreai-models from different URLs). Segmentation is Apple's code, unchanged.
 
 ```swift
 import ConceptSegmenter
