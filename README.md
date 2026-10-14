@@ -33,7 +33,7 @@ bundle on first use.
 
 ## Measured (macOS 27, M3 Max, 36 GB)
 
-| | |
+| Measure | Result |
 |---|---|
 | first load (compiles for this machine; the OS caches it) | 11.6 s |
 | one prompt, warm | 0.84 s |
